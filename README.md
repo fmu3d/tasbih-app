@@ -3,6 +3,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Ummah-brightgreen?style=for-the-badge)](https://github.com/fadimuhammed)
 [![Vibe Coded](https://img.shields.io/badge/Vibe-Coded-blue?style=for-the-badge)](https://www.fadimuhammed.com)
+[![Release](https://img.shields.io/github/v/release/fmu3d/tasbih-app?style=for-the-badge)](https://github.com/fmu3d/tasbih-app/releases)
 
 **I built this to earn Hasanat and help the Ummah. Free, Open Source, and Vibe-Coded.** 🤲✨
 
@@ -26,22 +27,16 @@ I spent a focused weekend **'Vibe Coding'** this project—obsessing over every 
 
 ---
 
-## 🚀 Live Demo & Downloads
+### 🚀 [Download Apps (Android APK, Windows EXE, Mac App)](https://github.com/fmu3d/tasbih-app/releases)
+*All versions are available as official releases. 🤖🪟🍏*
 
 ### 🌐 [Click to Open Live Site (Web Version)](https://tasbihappbyfadi.netlify.app)
 *Built for 100/100 Lighthouse performance.*
 
-### 🤖 Android (Mobile)
-Run this command to build your personal `.apk`:
-```bash
-flutter build apk --release
-```
+---
 
-### 🪟 Windows (Desktop)
-Run this command for a native `.exe`:
-```bash
-flutter build windows
-```
+## 🛠️ Step-by-Step for Local Build (Optional)
+...
 
 ---
 
