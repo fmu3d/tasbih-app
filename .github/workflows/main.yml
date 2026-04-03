@@ -63,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TasbihF_Windows
-          path: build/windows/runner/Release/*.exe
+          path: build/windows/**/*.exe
 
   create_release:
     name: Create GitHub Release 🚀
@@ -80,9 +80,11 @@ jobs:
       - name: Prepare Files
         run: |
           mkdir -p publish
-          cp release_artifacts/TasbihF_Android/app-release.apk publish/TasbihF_Android.apk
-          cp release_artifacts/TasbihF_MacOS/TasbihF_MacOS.zip publish/TasbihF_MacOS.zip
-          cp release_artifacts/TasbihF_Windows/*.exe publish/TasbihF_Windows.exe
+          # Robustly find files regardless of nested folder structure
+          find release_artifacts/TasbihF_Android -name "*.apk" -exec cp {} publish/TasbihF_Android.apk \;
+          find release_artifacts/TasbihF_MacOS -name "*.zip" -exec cp {} publish/TasbihF_MacOS.zip \;
+          find release_artifacts/TasbihF_Windows -name "*.exe" -exec cp {} publish/TasbihF_Windows.exe \;
+          ls -R publish # Debugging: list files to be sure
 
       - name: Push to GitHub Release
         uses: softprops/action-gh-release@v1
