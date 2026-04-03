@@ -166,7 +166,7 @@ class _TasbihHomeState extends State<TasbihHome> {
         content: "A gentle reminder to recite Surah al Kahf today and also give zakat.\n\n"
             "Include me in your duas. JazakAllahukhayr.",
         actionLabel: "JazakAllah",
-        showCoffee: true,
+        showCoffee: false,
       );
     }
   }
@@ -619,14 +619,7 @@ class FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _WebsiteButton(),
-            const SizedBox(width: 12),
-            _CoffeeButton(),
-          ],
-        ),
+        _WebsiteButton(),
       ],
     );
   }
@@ -643,39 +636,12 @@ class _WebsiteButton extends StatelessWidget {
         }
       },
       icon: const Icon(Icons.language, size: 20),
-      label: Text("Portfolio", style: GoogleFonts.outfit(fontWeight: FontWeight.w600)),
+      label: Text("Visit Fadi's Portfolio", style: GoogleFonts.outfit(fontWeight: FontWeight.w600)),
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue.shade800,
+        backgroundColor: Colors.blue.shade900,
         foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      ),
-    );
-  }
-}
-
-class _CoffeeButton extends StatelessWidget {
-  final bool small;
-  const _CoffeeButton({this.small = false});
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: () async {
-        const url = 'https://www.buymeacoffee.com/fadimuhammed';
-        if (await canLaunchUrl(Uri.parse(url))) {
-          await launchUrl(Uri.parse(url));
-        }
-      },
-      icon: const Icon(Icons.coffee, size: 20),
-      label: Text(small ? "Support Fadi" : "Buy Me a Coffee", 
-                  style: GoogleFonts.outfit(fontWeight: FontWeight.w600)),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.orange.shade800,
-        foregroundColor: Colors.white,
-        padding: EdgeInsets.symmetric(horizontal: small ? 16 : 24, vertical: 12),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-        elevation: 4,
       ),
     );
   }

@@ -28,7 +28,7 @@ I spent a focused weekend **'Vibe Coding'** this project—obsessing over every 
 
 ## 🚀 Live Demo & Downloads
 
-### 🌐 [Click to Open Live Site (Web Version)](https://tasbih.fadimuhammed.com)
+### 🌐 [Click to Open Live Site (Web Version)](https://tasbihappbyfadi.netlify.app)
 *Built for 100/100 Lighthouse performance.*
 
 ### 🤖 Android (Mobile)
@@ -61,7 +61,6 @@ This is an **Open Source Ummah Project**. I want this to get 1,000 stars and hel
 I’m a developer passionate about building products that matter.
 - **Portfolio**: [www.fadimuhammed.com](https://www.fadimuhammed.com)
 - **LinkedIn**: [Fadi Muhammed](https://linkedin.com/in/fadimuhammed)
-- **Coffee**: [Support the mission ☕](https://www.buymeacoffee.com/fadimuhammed)
 
 ---
 
