@@ -26,7 +26,7 @@ class TasbihApp extends StatelessWidget {
     final provider = Provider.of<TasbihProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Tasbih by Fadi',
+      title: 'Tasbih F',
       themeMode: provider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       theme: ThemeData(
         brightness: Brightness.light,
@@ -613,30 +613,16 @@ class FooterWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        _WebsiteButton(),
+        Text(
+          "visit my website at www.fadimuhammed.com",
+          style: GoogleFonts.outfit(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: Colors.blue.shade700,
+          ),
+          textAlign: TextAlign.center,
+        ),
       ],
-    );
-  }
-}
-
-class _WebsiteButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      onPressed: () async {
-        const url = 'https://www.fadimuhammed.com';
-        if (await canLaunchUrl(Uri.parse(url))) {
-          await launchUrl(Uri.parse(url));
-        }
-      },
-      icon: const Icon(Icons.language, size: 20),
-      label: Text("Visit Fadi's Portfolio", style: GoogleFonts.outfit(fontWeight: FontWeight.w600)),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue.shade900,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-      ),
     );
   }
 }
