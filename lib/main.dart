@@ -166,7 +166,6 @@ class _TasbihHomeState extends State<TasbihHome> {
         content: "A gentle reminder to recite Surah al Kahf today and also give zakat.\n\n"
             "Include me in your duas. JazakAllahukhayr.",
         actionLabel: "JazakAllah",
-        showCoffee: false,
       );
     }
   }
@@ -175,7 +174,6 @@ class _TasbihHomeState extends State<TasbihHome> {
     required String title,
     required String content,
     required String actionLabel,
-    bool showCoffee = false,
   }) {
     showDialog(
       context: context,
@@ -187,10 +185,6 @@ class _TasbihHomeState extends State<TasbihHome> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(content, style: GoogleFonts.outfit(fontSize: 16, height: 1.5)),
-            if (showCoffee) ...[
-              const SizedBox(height: 20),
-              _CoffeeButton(small: true),
-            ]
           ],
         ),
         actions: [
