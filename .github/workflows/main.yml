@@ -47,6 +47,9 @@ jobs:
   build_windows:
     name: Windows Build 🪟
     runs-on: windows-latest
+    # Added permissions to help with runner access
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -59,4 +62,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-exe
-          path: build/windows/runner/Release/*.exe
+          # Search everywhere in build/windows to find the exe regardless of folder structure
+          path: build/windows/**/*.exe
