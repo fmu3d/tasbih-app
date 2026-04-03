@@ -38,16 +38,17 @@ jobs:
       - run: flutter pub get
       - run: flutter config --enable-macos-desktop
       - run: flutter build macos --release
+      - name: Zip Mac App
+        run: zip -r TasbihF_MacOS.zip build/macos/Build/Products/Release/*.app
       - name: Upload Mac App
         uses: actions/upload-artifact@v4
         with:
           name: TasbihF_MacOS
-          path: build/macos/Build/Products/Release/*.app
+          path: TasbihF_MacOS.zip
 
   build_windows:
     name: Windows Build 🪟
     runs-on: windows-latest
-    # Added permissions to help with runner access
     permissions:
       contents: write
     steps:
@@ -62,5 +63,34 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TasbihF_Windows
-          # Search everywhere in build/windows to find the exe regardless of folder structure
-          path: build/windows/**/*.exe
+          path: build/windows/runner/Release/*.exe
+
+  create_release:
+    name: Create GitHub Release 🚀
+    needs: [build_android, build_macos, build_windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: release_artifacts
+
+      - name: Prepare Files
+        run: |
+          mkdir -p publish
+          cp release_artifacts/TasbihF_Android/app-release.apk publish/TasbihF_Android.apk
+          cp release_artifacts/TasbihF_MacOS/TasbihF_MacOS.zip publish/TasbihF_MacOS.zip
+          cp release_artifacts/TasbihF_Windows/*.exe publish/TasbihF_Windows.exe
+
+      - name: Push to GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: latest
+          name: "TasbihF: Latest Official Build"
+          body: "Official cross-platform release for TasbihF. Includes Android (APK), Windows (EXE), and macOS (ZIP)."
+          files: publish/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
