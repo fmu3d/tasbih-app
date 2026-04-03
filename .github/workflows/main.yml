@@ -24,7 +24,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Tasbih_F_Android
+          name: TasbihF_Android
           path: build/app/outputs/flutter-apk/app-release.apk
 
   build_macos:
@@ -41,7 +41,7 @@ jobs:
       - name: Upload Mac App
         uses: actions/upload-artifact@v4
         with:
-          name: Tasbih_F_MacOS
+          name: TasbihF_MacOS
           path: build/macos/Build/Products/Release/*.app
 
   build_windows:
@@ -61,6 +61,6 @@ jobs:
       - name: Upload Windows EXE
         uses: actions/upload-artifact@v4
         with:
-          name: Tasbih_F_Windows
+          name: TasbihF_Windows
           # Search everywhere in build/windows to find the exe regardless of folder structure
           path: build/windows/**/*.exe

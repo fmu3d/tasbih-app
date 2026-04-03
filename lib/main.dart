@@ -26,7 +26,7 @@ class TasbihApp extends StatelessWidget {
     final provider = Provider.of<TasbihProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Tasbih F',
+      title: 'TasbihF',
       themeMode: provider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
       theme: ThemeData(
         brightness: Brightness.light,

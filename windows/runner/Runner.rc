@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "Tasbih F" "\0"
+            VALUE "FileDescription", "TasbihF" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "tasbih_app" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "Tasbih F.exe" "\0"
-            VALUE "ProductName", "Tasbih F" "\0"
+            VALUE "OriginalFilename", "TasbihF.exe" "\0"
+            VALUE "ProductName", "TasbihF" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

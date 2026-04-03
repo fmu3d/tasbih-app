@@ -61,4 +61,4 @@ I’m a developer passionate about building products that matter.
 
 ---
 
-**© 2026 Tasbih by Fadi. Managed with ❤️ for the Ummah.**
+**© 2026 TasbihF by Fadi. Managed with ❤️ for the Ummah.**
