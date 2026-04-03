@@ -4,6 +4,7 @@
 [![Open Source](https://img.shields.io/badge/Open%20Source-Ummah-brightgreen?style=for-the-badge)](https://github.com/fadimuhammed)
 [![Vibe Coded](https://img.shields.io/badge/Vibe-Coded-blue?style=for-the-badge)](https://www.fadimuhammed.com)
 [![Release](https://img.shields.io/github/v/release/fmu3d/tasbih-app?style=for-the-badge)](https://github.com/fmu3d/tasbih-app/releases)
+[![Donate](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/fadimuhammed)
 
 **I built this to earn Hasanat and help the Ummah. Free, Open Source, and Vibe-Coded.** 🤲✨
 
@@ -56,6 +57,7 @@ This is an **Open Source Ummah Project**. I want this to get 1,000 stars and hel
 I’m a developer passionate about building products that matter.
 - **Portfolio**: [www.fadimuhammed.com](https://www.fadimuhammed.com)
 - **LinkedIn**: [Fadi Muhammed](https://linkedin.com/in/fadimuhammed)
+- **Support**: [Buy Me a Coffee ☕](https://buymeacoffee.com/fadimuhammed)
 
 ---
 
