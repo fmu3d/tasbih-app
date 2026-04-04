@@ -36,6 +36,20 @@ I spent a focused weekend **'Vibe Coding'** this project—obsessing over every 
 
 ---
 
+## 📱 How to Install on iOS (No App Store)
+Since you are a developer, the best way to install TasbihF on your iPhone is **Sideloading via Xcode**:
+
+1.  **Connect your iPhone** to your Mac.
+2.  **Open project in Xcode**: `open ios/Runner.xcworkspace`.
+3.  **Configure Development Signing**:
+    *   Click the **Runner** icon (blue icon) in the sidebar.
+    *   Go to **Signing & Capabilities**.
+    *   Select your **Team** (Personal Team works for 7 days).
+4.  **Run on Device**: Select your hardware iPhone at the top and click the **Run** button.
+5.  **Trust on iPhone**: Go to **Settings > General > VPN & Device Management** and **Trust** your developer profile.
+
+---
+
 ## 🛠️ Step-by-Step for Local Build (Optional)
 ...
 
